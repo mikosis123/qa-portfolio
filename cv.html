@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikiyas Sisay - QA & Automation Tester (Playwright & Manual) | CV</title>
+  <meta name="description" content="Resume of Mikiyas Sisay, QA & Automation Tester with 1 year at Perago Systems (Playwright & Manual), 2.5 years technical support in Technical Procurement Systems, and frontend developer background.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-main: #18191d;
+      --text-muted: #52525b;
+      --text-light: #71717a;
+      --accent: #18801f;
+      --pass: #2ead33;
+      --pass-ink: #06210a;
+      --border: #e4e6ea;
+      --bg: #f6f7f8;
+      --card-bg: #ffffff;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--text-main);
+      background-color: var(--bg);
+      line-height: 1.45;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      padding: 20px 16px;
+    }
+
+    /* Top Action Bar */
+    .action-bar {
+      max-width: 820px;
+      margin: 0 auto 14px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--pass);
+      color: var(--pass-ink);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(0.95);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--text-main);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #f4f4f5;
+    }
+
+    .badge-status {
+      font-size: 12px;
+      font-weight: 500;
+      color: #059669;
+      background: #ecfdf5;
+      padding: 3px 8px;
+      border-radius: 12px;
+      border: 1px solid #a7f3d0;
+    }
+
+    /* CV Document Container */
+    .cv-container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 32px 38px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+
+    .name-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    h1 {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .role-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .contact-row a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .contact-row a:hover {
+      color: var(--accent);
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+    }
+
+    .summary-text {
+      color: var(--text-muted);
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12.2px;
+    }
+
+    .skill-line strong {
+      color: var(--text-main);
+      min-width: 145px;
+      display: inline-block;
+    }
+
+    .skill-line span {
+      color: var(--text-muted);
+    }
+
+    /* Experience */
+    .exp-item {
+      margin-bottom: 10px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--text-main);
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .exp-date {
+      font-size: 11.5px;
+      color: var(--text-light);
+    }
+
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+    }
+
+    ul.bullets li {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    ul.bullets strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Projects */
+    .proj-item {
+      margin-bottom: 6px;
+    }
+
+    .proj-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .proj-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 1px;
+    }
+
+    .proj-name {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--text-main);
+    }
+
+    .proj-tech {
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    .proj-desc {
+      font-size: 11.8px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Education */
+    .edu-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .edu-line strong {
+      color: var(--text-main);
+    }
+
+    /* Print Setup */
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .cv-container {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      header {
+        margin-bottom: 8px !important;
+        padding-bottom: 6px !important;
+      }
+
+      h1 {
+        font-size: 19px !important;
+      }
+
+      .role-title {
+        font-size: 12px !important;
+      }
+
+      section {
+        margin-bottom: 8px !important;
+      }
+
+      .section-title {
+        font-size: 10.5px !important;
+        margin-bottom: 4px !important;
+        padding-bottom: 2px !important;
+      }
+
+      ul.bullets li, .summary-text, .proj-desc, .skills-list {
+        font-size: 10.8px !important;
+        line-height: 1.35 !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 8mm 12mm 8mm 12mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Navigation -->
+  <div class="action-bar">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="index.html" class="btn btn-outline">
+        &larr; Back to Portfolio
+      </a>
+      <span class="badge-status">
+        &bull; Perago Systems &bull; Playwright &amp; Manual QA
+      </span>
+    </div>
+
+    <div style="display: flex; gap: 8px;">
+      <button onclick="window.print()" class="btn btn-primary">
+        Print / Save as PDF
+      </button>
+      <a href="resume.md" download="Mikiyas_Sisay_QA_CV.md" class="btn btn-outline">
+        Markdown (.md)
+      </a>
+    </div>
+  </div>
+
+  <!-- Main CV Container -->
+  <div class="cv-container">
+    <!-- Header -->
+    <header>
+      <div class="name-title">
+        <h1>Mikiyas Sisay</h1>
+        <div class="role-title">QA &amp; Automation Tester (Playwright &amp; Manual)</div>
+      </div>
+      <div class="contact-row">
+        <span>Addis Ababa, Ethiopia (Open to Remote / Relocation)</span>
+        <a href="mailto:mikiyas.sisay1@peragosystems.net">mikiyas.sisay1@peragosystems.net</a>
+        <a href="https://t.me/Mikiyas_sisay" target="_blank">Telegram: @Mikiyas_sisay</a>
+        <a href="index.html">Portfolio</a>
+        <a href="https://github.com/mikosis123" target="_blank">github.com/mikosis123</a>
+        <a href="https://www.linkedin.com/in/mikiyas-sisay/" target="_blank">linkedin.com/in/mikiyas-sisay</a>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Detail-oriented Quality Assurance and Automation Tester with a versatile technical background spanning **Playwright test automation**, thorough **manual functional testing**, **technical support** in enterprise procurement systems, and **frontend development**. Over 1 year of QA experience at **Perago Systems** building automated regression suites using Playwright (TypeScript/JavaScript) and the Page Object Model (POM), combined with 2.5 years of technical support diagnosing complex enterprise procurement workflows. Passionate about eliminating flaky tests, catching critical bugs early, and collaborating in Agile teams.
+      </p>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-list">
+        <div class="skill-line">
+          <strong>Test Automation:</strong>
+          <span>Playwright (TypeScript &amp; JavaScript), Page Object Model (POM), Locator Strategies (`getByRole`, `getByTestId`), Assertions, Trace Viewer, Playwright Inspector</span>
+        </div>
+        <div class="skill-line">
+          <strong>Manual QA &amp; Methodology:</strong>
+          <span>Functional Testing, Exploratory Testing, Smoke &amp; Regression Testing, Test Case Design, Defect Lifecycle, Jira, Agile/Scrum</span>
+        </div>
+        <div class="skill-line">
+          <strong>Domain &amp; Tools:</strong>
+          <span>Technical Procurement Systems (e-GP), Playwright request API, Postman, Chrome DevTools, Git, GitHub Actions, VS Code, HTML5/CSS3/JS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <div class="section-title">Professional Experience</div>
+
+      <!-- Experience 1: Perago Systems -->
+      <article class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-role">QA &amp; Automation Tester (Playwright &amp; Manual)</span> &mdash; <span class="exp-company">Perago Systems</span>
+          </div>
+          <span class="exp-date">Nov 2025 &ndash; Present (1+ Year)</span>
+        </div>
+        <ul class="bullets">
+          <li>Authored and maintained <strong>90+ automated E2E tests</strong> in <strong>Playwright (TypeScript/JavaScript)</strong> covering critical user authentication, form validation, and transaction workflows.</li>
+          <li>Implemented the <strong>Page Object Model (POM)</strong> architecture, creating modular page components that simplified test maintenance and minimized UI flakiness.</li>
+          <li>Executed thorough <strong>manual exploratory, functional, and cross-browser testing</strong> across Chrome, Firefox, and Safari for new features and bug fixes.</li>
+          <li>Cut manual regression turnaround by <strong>40%</strong> by establishing automated Playwright smoke tests before release deployments.</li>
+          <li>Documented and tracked <strong>130+ defect tickets in Jira</strong>, providing developers with clear reproduction steps, expected vs. actual outcomes, and Playwright trace logs.</li>
+          <li>Configured automated API validations using Playwright's native <code style="font-size:11px;">request</code> context and Postman collections to check response schemas and status codes.</li>
+        </ul>
+      </article>
+
+      <!-- Experience 2: Technical Procurement System -->
+      <article class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-role">Technical Support Specialist</span> &mdash; <span class="exp-company">Technical Procurement System</span>
+          </div>
+          <span class="exp-date">May 2023 &ndash; Oct 2025 (2.5 Years)</span>
+        </div>
+        <ul class="bullets">
+          <li>Delivered technical support for enterprise procurement workflows, diagnosing user-reported issues, role-based access discrepancies, and platform anomalies.</li>
+          <li>Collaborated with QA and developer teams to investigate edge-case production bugs, verify defect fixes, and safeguard data integrity.</li>
+          <li>Developed deep domain expertise in multi-stage procurement lifecycles, supplier portals, bidding mechanisms, and enterprise software reliability.</li>
+        </ul>
+      </article>
+
+      <!-- Experience 3: Frontend Intern -->
+      <article class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-role">Frontend Developer Intern</span> &mdash; <span class="exp-company">TerakiApp</span>
+          </div>
+          <span class="exp-date">Jun 2022 &ndash; Apr 2023</span>
+        </div>
+        <ul class="bullets">
+          <li>Constructed responsive, accessible web UI components using Next.js, React, and modern JavaScript.</li>
+          <li>Gained deep familiarity with DOM hierarchies, state lifecycles, and network requests—providing strong intuition for Playwright locator design and asynchronous debugging.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Featured Projects -->
+    <section>
+      <div class="section-title">Automation Projects</div>
+      <div class="proj-item">
+        <div class="proj-head">
+          <span class="proj-name">Enterprise E-Commerce &amp; Workflow Playwright Suite</span>
+          <span class="proj-tech">Playwright • TypeScript • Page Object Model • GitHub Actions</span>
+        </div>
+        <p class="proj-desc">
+          Automated regression suite covering user authentication, multi-step carts, and checkout validations with Playwright HTML reporting and trace artifacts on failure.
+        </p>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <span class="proj-name">Procurement Workflow &amp; API Automation Collection</span>
+          <span class="proj-tech">Playwright APIRequestContext • Postman • TypeScript</span>
+        </div>
+        <p class="proj-desc">
+          Automated test suite validating multi-step procurement lifecycles, status transitions, role permissions, and REST API payload integrity.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section>
+      <div class="section-title">Certifications &amp; Education</div>
+      <div class="edu-line">
+        <div><strong>Playwright Test Automation Certified Practitioner</strong></div>
+        <span>Specialized Training</span>
+      </div>
+      <div class="edu-line" style="color: var(--text-light); font-size: 11.8px; margin-top: 3px;">
+        <div>B.S. in Mechanical Engineering</div>
+        <span>University Degree</span>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
