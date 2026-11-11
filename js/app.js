@@ -113,7 +113,7 @@ function initSearchFilter() {
    ========================================================================== */
 function initEmailAction() {
   const emailBtns = document.querySelectorAll('.btn-email-action');
-  const email = 'mikiyas.sisay1@peragosystems.net';
+  const email = 'mikiyassisay009@gmail.com';
 
   emailBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {

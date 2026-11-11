@@ -2,7 +2,7 @@
 **QA & Automation Tester (Playwright & Manual Testing)**
 
 - **Location:** Addis Ababa, Ethiopia (Open to Remote / Relocation)
-- **Email:** mikiyas.sisay1@peragosystems.net
+- **Email:** mikiyassisay009@gmail.com
 - **Telegram:** [t.me/Mikiyas_sisay](https://t.me/Mikiyas_sisay)
 - **LinkedIn:** [linkedin.com/in/mikiyas-sisay](https://www.linkedin.com/in/mikiyas-sisay/)
 - **GitHub:** [github.com/mikosis123](https://github.com/mikosis123)
